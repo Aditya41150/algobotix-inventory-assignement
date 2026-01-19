@@ -30,8 +30,7 @@ class DatabaseHelper {
     const idType = 'TEXT PRIMARY KEY';
     const textType = 'TEXT NOT NULL';
     const integerType = 'INTEGER NOT NULL';
-
-    // Products table
+    
     await db.execute('''
       CREATE TABLE products (
         id $idType,
@@ -44,7 +43,6 @@ class DatabaseHelper {
       )
     ''');
 
-    // Stock history table
     await db.execute('''
       CREATE TABLE stock_history (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
